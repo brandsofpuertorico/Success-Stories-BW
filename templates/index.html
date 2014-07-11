@@ -13,67 +13,89 @@
 			<div class="name-wrapper">
 				<span id="name"></span>
 			</div>
+     <!--
         </div>
         <div class="text-wrapper">
             <div class="question">
-                <h1>&iquest;Qu&eacute es OrgulloPR&quest;</h1>
-                <p>Orgullo PR es un proyecto para resaltar lo bueno de todo Puerto Rico. La diferencia es que aqui <strong>TU</strong> eres el que nos dice que es el Orgullo de Puerto Rico.</p>
-                <p>Para ver los videos de un municipio en especifico seleccionelo en el mapa de la parte superior.</p>
-            </div>
-            <div class="about">
-                <h1>Envianos tu historia</h1>
-
-                <p>Guia de preguntas: por favor contesta las siguientes peguntas</p>
-                <ul>
-                <li> Cual es tu nombre? </li>
-                <li> Que haces? </li>
-                <li> Donde vives?</li>
-                <li> Que te enorgullece de tu lugar de residencia? </li>
-                <li> Que haces para que [tu lugar de residencia] se sienta orgulloso de ti? </li>
-                <li> Recuerdas alguna iniciativa de gobierno, local o nacional, pasada o presente que te haya enorgullecido? </li>
-                </ul>
+                <h1>&iquest;Qu&eacute es Historias de éxito?</h1>
+                <p>Historias de éxito es un proyecto para resaltar y promocionar las historias de éxito de pequeños empresarios en Puerto Rico que consiguieron financiamiento y crecieron gracias a ello.</p> -->
             </div>
             <div class="button-wrapper">
-                <a class="btn"><span>ENVIANOS TU HISTORIA</span></a>
+                <a class="btn"><span>SUBE TU HISTORIA</span></a>
             </div>
             <div class="form-wrapper">
 							<a name="send-story">
                 <form action="/add" method="post" class="input-form" name="input-form">
                     <fieldset>
-                        <legend>Entre su informaci&oacute;n</legend>
+                        <legend>Sube tu historia</legend>
                         <ul>
                             <li>
                                 <label for="name">Nombre:</label>
                                 <input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
                             </li>
                             <li>
-                                <label for="prof">Profesi&oacute;n:</label>
-                                <input type="text" id="prof" name="prof" placeholder="Entre su profesi&oacute;n" required="true"/>
+                                <label for="prof">Nombre del negocio</label>
+                                <input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
                             </li>
                             <li>
-                                <label for="town">Municipio:</label>
+                                <label for="town">Industria:</label>
                                 <select id="town" name="town" required="true">
-                                    <option value="">Seleccione uno...</option>
+                                    <option value="">Selecciona uno...</option>
                                     {% for town in towns %}
                                         <option value="{{ town.name }}">{{ town.name }}</option>
                                     {% endfor %}
                                 </select>
                             </li>
                             <li>
-                                <label for="pridein">&iquest;Qu&eacute; te orgullese&quest;</label>
-                                <textarea id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
+                                <label for="prof"> Breve reseña del negocio </label> 
+                                <input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
                             </li>
                             <li>
-                                <label for="prideof">&iquest;Qu&eacute; has hecho para que esten orgullosos de t&iacute;&quest;</label>
-                                <textarea id="pride_of" name="pride_of" cols="50" rows="6" ></textarea>
+                                <label for="town">Municipio:</label>
+                                <select id="town" name="town" required="true">
+                                    <option value="">Selecciona uno...</option>
+                                    {% for town in towns %}
+                                        <option value="{{ town.name }}">{{ town.name }}</option>
+                                    {% endfor %}
+                                </select>
                             </li>
                             <li>
-                                <label for="pridegov">&iquest;Qu&eacute; iniciativa de gobierno te enorgulleci&oacute;&quest;</label>
-                                <textarea id="pride_gov" name="pride_gov" cols="50" rows="6" ></textarea>
+                                <label for="town">Tipo de financiamiento:</label>
+                                <select id="town" name="town" required="true">
+                                    <option value="">Selecciona uno...</option>
+                                    {% for town in towns %}
+                                        <option value="{{ town.name }}">{{ town.name }}</option>
+                                    {% endfor %}
+                                </select>
                             </li>
                             <li>
-                                <label for="youtubelink">Enlace a su video</label>
-                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entre el url de su video de Youtube" >
+                                <label for="town">Uso del financiamiento:</label>
+                                <select id="town" name="town" required="true">
+                                    <option value="">Selecciona uno...</option>
+                                    {% for town in towns %}
+                                        <option value="{{ town.name }}">{{ town.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </li>
+                            <li>
+                                <label for="name">Twitter:</label>
+                                <input type="text" id="name" name="name" placeholder="Entra la página de Twitter" required="true"/>
+                            </li>
+                            <li>
+                                <label for="name">Facebook:</label>
+                                <input type="text" id="name" name="name" placeholder="Entra la página de facebook" required="true"/>
+                            </li>
+                            <li>
+                                <label for="name">Website:</label>
+                                <input type="text" id="name" name="name" placeholder="Entra la página web" required="true"/>
+                            </li>
+                            <li>
+                                <label for="youtubelink">Enlace a video</label>
+                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su video de Youtube" >
+                            </li>
+                            <li>
+                                <label for="youtubelink">Enlace a foto</label>
+                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
                             </li>
                             <li>
                                 <button type="submit" class="submit">Someter</button>

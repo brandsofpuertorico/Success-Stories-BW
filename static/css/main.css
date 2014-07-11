@@ -15,7 +15,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: white;
 }
 
 html {
@@ -35,7 +35,7 @@ html {
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #97e8c1;
     text-shadow: none;
 }
 
