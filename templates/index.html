@@ -8,7 +8,7 @@
     <div class="content-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="map-wrapper">
             <div id="map">
-                <h1>PUERTO<img src="{{ url_for('static', filename='img/Sun.png') }}">&nbsp;RICO</h1>
+                <h1>HISTORIAS&nbsp;<span><span>DE</span> <img src="{{ url_for('static', filename='img/Sun.png') }}"></span>&nbsp;NEGOCIOS</h1>
             </div>
 			<div class="name-wrapper">
 				<span id="name"></span>
@@ -19,95 +19,12 @@
             <div class="question">
                 <h1>&iquest;Qu&eacute es Historias de éxito?</h1>
                 <p>Historias de éxito es un proyecto para resaltar y promocionar las historias de éxito de pequeños empresarios en Puerto Rico que consiguieron financiamiento y crecieron gracias a ello.</p> -->
-            </div>
+            
+            <div class="form-wrapper">
+                            <a name="send-story"></div>
             <div class="button-wrapper">
                 <a class="btn"><span>SUBE TU HISTORIA</span></a>
             </div>
-            <div class="form-wrapper">
-							<a name="send-story">
-                <form action="/add" method="post" class="input-form" name="input-form">
-                    <fieldset>
-                        <legend>Sube tu historia</legend>
-                        <ul>
-                            <li>
-                                <label for="name">Nombre:</label>
-                                <input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
-                            </li>
-                            <li>
-                                <label for="prof">Nombre del negocio</label>
-                                <input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
-                            </li>
-                            <li>
-                                <label for="town">Industria:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="prof"> Breve reseña del negocio </label> 
-                                <input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
-                            </li>
-                            <li>
-                                <label for="town">Municipio:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="town">Tipo de financiamiento:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="town">Uso del financiamiento:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="name">Twitter:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página de Twitter" required="true"/>
-                            </li>
-                            <li>
-                                <label for="name">Facebook:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página de facebook" required="true"/>
-                            </li>
-                            <li>
-                                <label for="name">Website:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página web" required="true"/>
-                            </li>
-                            <li>
-                                <label for="youtubelink">Enlace a video</label>
-                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su video de Youtube" >
-                            </li>
-                            <li>
-                                <label for="youtubelink">Enlace a foto</label>
-                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
-                            </li>
-                            <li>
-                                <button type="submit" class="submit">Someter</button>
-                                <button type="reset" class="cancel">Cancelar</button>
-                            </li>
-                        </ul>
-                    </fieldset>
-                </form>
-							</a>
-            </div>
-        </div>
-	</div>
     {% block scripts %}
         {{ super() }}
     {% endblock %}

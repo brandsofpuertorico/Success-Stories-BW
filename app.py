@@ -182,6 +182,9 @@ def index():
     load_towns()
     return render_template('index.html', towns=g.towns)
 
+@app.route('/subir')
+def subir():
+    return render_template('subir.html')
 
 @app.route('/videos', methods=['GET'])
 def show_videos():
