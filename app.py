@@ -186,6 +186,14 @@ def index():
 def subir():
     return render_template('subir.html')
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
+@app.route('/explora')
+def explora():
+    return render_template('explora.html')
+
 @app.route('/videos', methods=['GET'])
 def show_videos():
     return render_template('videos.html')

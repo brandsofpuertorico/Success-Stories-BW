@@ -7,10 +7,10 @@
 {% block content %}
 
 
-                <form action="/add" method="post" class="input-form" name="input-form"><legend>Sube tu historia</legend>
+                <form action="/add" method="post" class="input-form" name="input-form"><legend>Sube la historia de tu negocio: </legend>
                         <ul>
                             <li>
-                                <label for="name">Nombre:</label>
+                            <label for="name">Tu email:</label>
                                 <input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
                             </li>
                             <li>
@@ -18,7 +18,7 @@
                                 <input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
                             </li>
                             <li>
-                                <label for="town">Industria:</label>
+                               <label for="town">Industria:</label>
                                 <select id="town" name="town" required="true">
                                     <option value="">Selecciona uno...</option>
                                     {% for town in towns %}
@@ -40,7 +40,7 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="town">Tipo de financiamiento:</label>
+                                <label for="town">Principal Desafío:</label>
                                 <select id="town" name="town" required="true">
                                     <option value="">Selecciona uno...</option>
                                     {% for town in towns %}
@@ -49,7 +49,7 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="town">Uso del financiamiento:</label>
+                                <label for="town">Respuesta a desafío:</label>
                                 <select id="town" name="town" required="true">
                                     <option value="">Selecciona uno...</option>
                                     {% for town in towns %}
@@ -76,10 +76,13 @@
                             <li>
                                 <label for="youtubelink">Enlace a foto</label>
                                 <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
-                            </li>
+                             </li>
+                             <li>
+                                <label Would you like to receive emails about Small Business programs? ></label>
+                             </li>
                             <li>
-                                <button type="submit" class="submit">Enviar</button>
-                            </li>
+                               <button type="submit" class="submit">Enviar</button>
+                           </li>
                         </ul>
                     </fieldset>
                    </form>
@@ -87,5 +90,7 @@
             </div>
         </div>
 	</div>
+
+
 
 {% endblock %}	
