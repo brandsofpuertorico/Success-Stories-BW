@@ -184,7 +184,8 @@ def index():
 
 @app.route('/subir')
 def subir():
-    return render_template('subir.html')
+    load_towns()
+    return render_template('subir.html', towns=g.towns)
 
 @app.route('/sobre')
 def sobre():
