@@ -6,18 +6,18 @@
 {% endblock %}
 {% block content %}
 <form action="/add" method="post" class="input-form" name="input-form">
-	<legend>Sube la historia de tu negocio:</legend>
+	<legend>Sube la historia de tu negocio: queremos compartir lo bueno, lo malo y lo malisimo</legend>
 	<ul>
 		<li>
 			<label for="name">Tu email</label>
 			<input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
 		</li>
 		<li>
-			<label for="prof">Nombre del negocio</label>
+			<label for="prof">El Nombre del negocio</label>
 			<input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
 		</li>
 		<li>
-			<label for="town">Industria</label>
+			<label for="town">La Industria del negocio</label>
 			<select id="town" name="town" required="true">
 				<option value="">Selecciona uno...</option>
 				{% for industry in industries %}
@@ -26,11 +26,11 @@
 			</select>
 		</li>
 		<li>
-			<label for="prof">Breve reseña del negocio</label>
+			<label for="prof">Breve historia del negocio</label>
 			<input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
 		</li>
 		<li>
-			<label for="town">Municipio</label>
+			<label for="town">Municipio del negocio</label>
 			<select id="town" name="town" required="true">
 				<option value="">Selecciona uno...</option>
 				{% for town in towns %}
@@ -39,7 +39,7 @@
 			</select>
 		</li>
 		<li>
-			<label for="town">Principal Desafío</label>
+			<label for="town">Tus metas</label>
 			<select id="town" name="town" required="true">
 				<option value="">Selecciona uno...</option>
 				{% for town in towns %}
@@ -48,7 +48,7 @@
 			</select>
 		</li>
 		<li>
-			<label for="town">Respuesta a desafío</label>
+			<label for="town">Tu principal desafío </label>
 			<select id="town" name="town" required="true">
 				<option value="">Selecciona uno...</option>
 				{% for town in towns %}
@@ -83,3 +83,15 @@
 </fieldset>
 </form>
 {% endblock %}	
+
+What are your three most important goals in your business right now?
+What are your three most important financial goals right now?
+
+What are goals if you don't lay out for yourself the major concerns or worries that you have in your life right now? That's what we thought.  
+
+Once you have identified, say, three major worries, ask yourself:
+
+What are the ideal solutions to each of these problems?
+How could I eliminate these problems or worries immediately?
+What is the fastest and most direct way to solve each problem? 
+Balancing your goals with major worries (and potential solutions to these major worries) is a great place to start with goal setting.

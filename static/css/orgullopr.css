@@ -4,6 +4,14 @@ body {
     font-family: 'Montserrat', serif;
     color: white;
 }
+
+.container {
+
+     width: 1170px;
+     display: block;
+     height: 100%;
+}
+
 form legend {
     color: white;
     border: none;
@@ -353,6 +361,14 @@ button.submit:active {
     width: 100%;
     padding-top: 1em;
 }
+
+.col-lg-4 {
+
+   width:33.33333333%;
+   float: left;
+   position: relative;
+}
+
 
 #map h1 {
     color: rgba(253,249,94,1);
