@@ -1,9 +1,18 @@
 /* layout.html start */
 body {
     background-color: rgba(72,91,210,1);
-
-);
     font-family: 'Montserrat', serif;
+    color: white;
+}
+form legend {
+    color: white;
+    border: none;
+}
+.input-form {
+    border-top: none;
+}
+input {
+    color: #333;
 }
 footer {
     background-color: rgba(207,207,207,1);
@@ -226,7 +235,6 @@ ul.footer-links li:hover{
     padding-top: 1.5em;
     width: 60%;
     text-align: center;
-    border-top: 1px solid rgb(173, 175, 173);
 }
 .input-form legend {
     font-family: 'montserrat', sans-serif;

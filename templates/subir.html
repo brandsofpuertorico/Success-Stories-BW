@@ -1,96 +1,85 @@
 {% extends "layout.html" %}
-{% block title %}Orgullo Map{% endblock %}
+{% block title %}Subir - Historias de Negocios - Puerto Rico{% endblock %}
 {% block head %}
 	{{ super() }}
 	<!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
-
-
-                <form action="/add" method="post" class="input-form" name="input-form"><legend>Sube la historia de tu negocio: </legend>
-                        <ul>
-                            <li>
-                            <label for="name">Tu email:</label>
-                                <input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
-                            </li>
-                            <li>
-                                <label for="prof">Nombre del negocio</label>
-                                <input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
-                            </li>
-                            <li>
-                               <label for="town">Industria:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="prof"> Breve reseña del negocio </label> 
-                                <input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
-                            </li>
-                            <li>
-                                <label for="town">Municipio:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="town">Principal Desafío:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="town">Respuesta a desafío:</label>
-                                <select id="town" name="town" required="true">
-                                    <option value="">Selecciona uno...</option>
-                                    {% for town in towns %}
-                                        <option value="{{ town.name }}">{{ town.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </li>
-                            <li>
-                                <label for="name">Twitter:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página de Twitter" required="true"/>
-                            </li>
-                            <li>
-                                <label for="name">Facebook:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página de facebook" required="true"/>
-                            </li>
-                            <li>
-                                <label for="name">Website:</label>
-                                <input type="text" id="name" name="name" placeholder="Entra la página web" required="true"/>
-                            </li>
-                            <li>
-                                <label for="youtubelink">Enlace a video</label>
-                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su video de Youtube" >
-                            </li>
-                            <li>
-                                <label for="youtubelink">Enlace a foto</label>
-                                <input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
-                             </li>
-                             <li>
-                                <label Would you like to receive emails about Small Business programs? ></label>
-                             </li>
-                            <li>
-                               <button type="submit" class="submit">Enviar</button>
-                           </li>
-                        </ul>
-                    </fieldset>
-                   </form>
-			   </a>
-            </div>
-        </div>
-	</div>
-
-
-
+<form action="/add" method="post" class="input-form" name="input-form">
+	<legend>Sube la historia de tu negocio:</legend>
+	<ul>
+		<li>
+			<label for="name">Tu email</label>
+			<input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
+		</li>
+		<li>
+			<label for="prof">Nombre del negocio</label>
+			<input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
+		</li>
+		<li>
+			<label for="town">Industria</label>
+			<select id="town" name="town" required="true">
+				<option value="">Selecciona uno...</option>
+				{% for industry in industries %}
+				<option value="{{ town.name }}">{{ industry.name }}</option>
+				{% endfor %}
+			</select>
+		</li>
+		<li>
+			<label for="prof">Breve reseña del negocio</label>
+			<input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
+		</li>
+		<li>
+			<label for="town">Municipio</label>
+			<select id="town" name="town" required="true">
+				<option value="">Selecciona uno...</option>
+				{% for town in towns %}
+				<option value="{{ town.name }}">{{ town.name }}</option>
+				{% endfor %}
+			</select>
+		</li>
+		<li>
+			<label for="town">Principal Desafío</label>
+			<select id="town" name="town" required="true">
+				<option value="">Selecciona uno...</option>
+				{% for town in towns %}
+				<option value="{{ town.name }}">{{ town.name }}</option>
+				{% endfor %}
+			</select>
+		</li>
+		<li>
+			<label for="town">Respuesta a desafío</label>
+			<select id="town" name="town" required="true">
+				<option value="">Selecciona uno...</option>
+				{% for town in towns %}
+				<option value="{{ town.name }}">{{ town.name }}</option>
+				{% endfor %}
+			</select>
+		</li>
+		<li>
+			<label for="name">Twitter</label>
+			<input type="text" id="name" name="name" placeholder="Entra la página de Twitter" required="true"/>
+		</li>
+		<li>
+			<label for="name">Facebook</label>
+			<input type="text" id="name" name="name" placeholder="Entra la página de facebook" required="true"/>
+		</li>
+		<li>
+			<label for="name">Website</label>
+			<input type="text" id="name" name="name" placeholder="Entra la página web" required="true"/>
+		</li>
+		<li>
+			<label for="youtubelink">Enlace a video</label>
+			<input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su video de Youtube" >
+		</li>
+		<li>
+			<label for="youtubelink">Enlace a foto</label>
+			<input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
+		</li>
+		<li>
+			<button type="submit" class="submit">Enviar</button>
+		</li>
+	</ul>
+</fieldset>
+</form>
 {% endblock %}	

@@ -1,1 +1,32 @@
-sobre.html
+{% extends "layout.html" %}
+{% block title %}Subir - Historias de Negocios - Puerto Rico{% endblock %}
+{% block head %}
+	{{ super() }}
+	<!-- any local css/styling should be put here -->
+{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+  	<div class="col-md-8 col-md-offset-2">
+			<h1>Sobre Historias de negocios</h1>
+			<h3>Small business is under pressure in Puerto Rico. Historias de Negocios believes it is time for small business to stand up and be counted by sharing our views and stories, to help change the way things work. Tell us how your small business is faring and what the barriers are to your enterprise developing and growing.
+			</h3>
+			<br/>
+			<p align="">
+				A few small tweaks to how you approach a community of peers will make all the difference in how fast you can bounce back from challenges.
+				<br/>
+			</p>
+			<br/>
+			<p align="center">
+				<div class="button-wrapper">
+          <a class="btn" href="/subir"><span>SUBE TU HISTORIA</span></a>
+        </div>
+			</p> 
+			<br/>
+  	</div>
+  </div>
+</div>
+
+
+{% endblock %}
