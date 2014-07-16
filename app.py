@@ -198,6 +198,26 @@ def sobre():
 
 @app.route('/explora')
 def explora():
+    """
+    Get all videos from all cities and renders them in the videos view.
+    """
+
+    towns = get_towns()
+    entries = {}
+
+    for town in towns:
+        town_entries = get_town_videos(town['name'])
+        list_of_entries = []
+        for entry in town_entries:
+            list_of_entries.append(entry)
+        if list_of_entries != []:
+            entries[town['name']] = list_of_entries
+
+    if entries:
+        return render_template('explora.html', entries=entries)
+    else:
+        flash('No se encontraron videos.')
+        return render_template('explora.html')
     return render_template('explora.html')
 
 @app.route('/videos', methods=['GET'])
@@ -212,8 +232,6 @@ def get_videos(town):
     """
 
     entries = get_town_videos(town)
-
-    print entries
 
     if entries:
         return render_template('videos.html', videos=entries, town=town)

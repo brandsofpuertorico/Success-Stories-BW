@@ -1,15 +1,64 @@
 {% extends "layout.html" %}
-{% block title %}Subir - Historias de Negocios - Puerto Rico{% endblock %}
+{% block title %}Explora - Historias de Negocios - Puerto Rico{% endblock %}
 {% block head %}
-	{{ super() }}
-	<!-- any local css/styling should be put here -->
+  {{ super() }}
+  <!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
+  {% for town, town_entries in entries.iteritems() %}
+    {% if town_entries %}
+    <div class="videos-content">
+      <div class="video-header">
+          <span class="town-name">{{ town }}</span>
+      </div>
+      <div class="video-container">
+        {% for video in town_entries %}
+          <div class="item">
+            {% if video.youtube_url %}
+              <iframe width="300" height="150" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+            {% else %}
+              <img src="{{ video.picture_url }}" width="300" height"150" alt="{{ video.prof }}">
+            {% endif %}
+            <div> <span class="video-name">{{ video.name }} </span></div>
+            <div> <span class="video-name">{{ video.industry }} </span></div>
+            <div> <span class="video-name">{{ video.pride_in }} </span></div>
+            <div> <span class="video-name">{{ video.desafio }} </span></div>
+            {% for meta in video.metas %}
+              {% if meta != "" %}
+                <div> <span class="video-name">Meta: {{ meta }} </span></div>
+              {% endif %}
+            {% endfor %}
+            <div> <span class="video-name">{{ video.twitter_url }} </span></div>
+            <div> <span class="video-name">{{ video.facebook_url }} </span></div>
+            <div> <span class="video-name">{{ video.website_url }} </span></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+    {% block scripts %}
+        {{ super() }}
+    {% endblock %}
 
+    <script>
 
+        orgullopr.init();
 
+        $('document').ready(function(){
 
+            var msnry = new Masonry($('.video-container')[0], {
+                itemSelector: '.item',
+                columnWidth: 240,
+                isFitWidth: true,
+                animationOptions: {
+                    duration: 400
+                },
+                containerStyle: {
+                    position: 'relative'
+                }
+            });
+        });
+
+    </script>
 {% endblock %}
-
-
-
