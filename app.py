@@ -37,14 +37,19 @@ class Testimonial(Document):
     structure = {
         'name': unicode,
         'prof': unicode,
+        'industry': unicode,
+        'industry_other': unicode,
         'town': unicode,
         'pride_in': unicode,
-        'pride_of': unicode,
-        'pride_gov': unicode,
-        'youtube_vid_id': unicode,
+        'metas': list,
+        'desafio': unicode,
+        'twitter_url': unicode,
+        'facebook_url': unicode,
+        'youtube_url': unicode,
+        'picture_url': unicode,
         'created_date': datetime
     }
-    required_fields = ['name', 'town', 'pride_in', 'pride_of', 'pride_gov']
+    required_fields = ['name', 'prof', 'industry', 'town', 'pride_in', 'metas', 'desafio', 'picture_url']
     default_values = {'created_date': datetime.utcnow}
 
 
@@ -223,13 +228,19 @@ def add_entry():
 
     testimonials = db.Testimonial()
 
-    testimonials['name'] = request.form['name']
-    testimonials['prof'] = request.form['prof']
-    testimonials['town'] = request.form['town']
-    testimonials['pride_in'] = request.form['pride_in']
-    testimonials['pride_of'] = request.form['pride_of']
-    testimonials['pride_gov'] = request.form['pride_gov']
-    testimonials['youtube_vid_id'] = video_id(request.form['youtube_link'])
+    testimonials['name'] = request.form.get('name', None)
+    testimonials['prof'] = request.form.get('prof', None)
+    testimonials['industry'] = request.form.get('industry', None)
+    testimonials['industry_other'] = request.form.get('industry_other', None)
+    testimonials['town'] = request.form.get('town', None)
+    testimonials['pride_in'] = request.form.get('pride_in', None)
+    testimonials['metas'] = request.form.getlist('metas[]', None)
+    testimonials['desafio'] = request.form.get('desafio', None)
+    testimonials['twitter_url'] = request.form.get('twitter_url', None)
+    testimonials['facebook_url'] = request.form.get('facebook_url', None)
+    testimonials['youtube_url'] = request.form.get('youtube_url', None)
+    testimonials['picture_url'] = request.form.get('picture_url', None)
+    testimonials['created_date'] = request.form.get('created_date', None)
 
     testimonials.save()
 

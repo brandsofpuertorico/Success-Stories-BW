@@ -5,11 +5,11 @@
 	<!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
-<form action="/add" method="post" class="input-form" name="input-form">
+<form action="/add" method="POST" class="input-form" name="input-form">
 	<legend>Sube la historia de tu negocio: queremos compartir lo bueno, lo malo y lo malisimo</legend>
 	<ul>
 		<li>
-			<label for="name">Tu email</label>
+			<label for="name">Tu nombre</label>
 			<input type="text" id="name" name="name" placeholder="Entre su nombre" required="true"/>
 		</li>
 		<li>
@@ -98,23 +98,23 @@
 		</li>
 		<li>
 			<label for="name">Twitter</label>
-			<input type="text" id="name" name="name" placeholder="Entra la página de Twitter" required="true"/>
+			<input type="text" id="name" name="twitter_url" placeholder="Entra la página de Twitter"/>
 		</li>
 		<li>
 			<label for="name">Facebook</label>
-			<input type="text" id="name" name="name" placeholder="Entra la página de facebook" required="true"/>
+			<input type="text" id="name" name="facebook_url" placeholder="Entra la página de facebook"/>
 		</li>
 		<li>
 			<label for="name">Website</label>
-			<input type="text" id="name" name="name" placeholder="Entra la página web" required="true"/>
+			<input type="text" id="name" name="website_url" placeholder="Entra la página web"/>
 		</li>
 		<li>
-			<label for="youtubelink">Enlace a video</label>
-			<input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su video de Youtube" >
+			<label for="youtube_url">Enlace a video</label>
+			<input id="youtube_url" name="youtube_url" type="text" placeholder="Entra el url de su video de Youtube" >
 		</li>
 		<li>
-			<label for="youtubelink">Enlace a foto</label>
-			<input id="youtube_link" name="youtube_link" type="text" placeholder="Entra el url de su  foto">
+			<label for="picture_url">Enlace a foto</label>
+			<input id="picture_url" name="picture_url" type="text" placeholder="Entra el url de su foto" required="true">
 		</li>
 		<li>
 			<button type="submit" class="submit">Enviar</button>
@@ -123,15 +123,3 @@
 </fieldset>
 </form>
 {% endblock %}	
-
-What are your three most important goals in your business right now?
-What are your three most important financial goals right now?
-
-What are goals if you don't lay out for yourself the major concerns or worries that you have in your life right now? That's what we thought.  
-
-Once you have identified, say, three major worries, ask yourself:
-
-What are the ideal solutions to each of these problems?
-How could I eliminate these problems or worries immediately?
-What is the fastest and most direct way to solve each problem? 
-Balancing your goals with major worries (and potential solutions to these major worries) is a great place to start with goal setting.

@@ -15,8 +15,23 @@
 
                 {% for video in videos %}
                     <div class="item">
-                        <iframe width="400" height="200" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+                        {% if video.youtube_url %}
+                        <iframe width="300" height="150" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+                        {% else %}
+                        <img src="{{ video.picture_url }}" width="300" height"150" alt="{{ video.prof }}">
+                        {% endif %}
                         <div> <span class="video-name">{{ video.name }} </span></div>
+                        <div> <span class="video-name">{{ video.industry }} </span></div>
+                        <div> <span class="video-name">{{ video.pride_in }} </span></div>
+                        <div> <span class="video-name">{{ video.desafio }} </span></div>
+                        {% for meta in video.metas %}
+                            {% if meta != "" %}
+                                <div> <span class="video-name">Meta: {{ meta }} </span></div>
+                            {% endif %}
+                        {% endfor %}
+                        <div> <span class="video-name">{{ video.twitter_url }} </span></div>
+                        <div> <span class="video-name">{{ video.facebook_url }} </span></div>
+                        <div> <span class="video-name">{{ video.website_url }} </span></div>
                     </div>
                 {% endfor %}
             </div>
