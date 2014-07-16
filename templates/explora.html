@@ -6,7 +6,6 @@
 {% endblock %}
 {% block content %}
   {% for town, town_entries in entries.iteritems() %}
-    {% if town_entries %}
     <div class="videos-content">
       <div class="video-header">
           <span class="town-name">{{ town }}</span>
@@ -35,7 +34,6 @@
         {% endfor %}
       </div>
     </div>
-    {% endif %}
   {% endfor %}
     {% block scripts %}
         {{ super() }}

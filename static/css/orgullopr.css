@@ -98,7 +98,7 @@ div.video {
     float: left;
     height: 70px;
     width: 70px;
-    background: url("http://cl.ly/WXYi/logo.jpg");
+    /*background: url("http://cl.ly/WXYi/logo.jpg");*/
     background-size: cover;
     margin: 5px 15px;
 }
