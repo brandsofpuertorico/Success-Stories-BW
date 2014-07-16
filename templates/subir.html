@@ -17,20 +17,45 @@
 			<input type="text" id="prof" name="prof" placeholder="Entra el nombre del negocio" required="true"/>
 		</li>
 		<li>
-			<label for="town">La Industria del negocio</label>
-			<select id="town" name="town" required="true">
+			<label for="industry">La Industria del negocio</label>
+			<select id="industry" name="industry" required="true">
 				<option value="">Selecciona uno...</option>
-				{% for industry in industries %}
-				<option value="{{ town.name }}">{{ industry.name }}</option>
-				{% endfor %}
+				<option value="agriculture">Agriculture</option>
+				<option value="tourism">Tourism</option>
+				<option value="finance_insurance">Finance and Insurance</option>
+				<option value="accomodation">Accommodation</option>
+				<option value="food_drink">Food & Drink services</option>
+				<option value="art_entertainment">Art, entertainment</option>
+				<option value="construction">Construction</option>
+				<option value="pharmaceuticals">Pharmaceuticals</option>
+				<option value="biotechnology">Biotechnology</option>
+				<option value="wholesale_trade">Wholesale Trade</option>
+				<option value="health_care">Health care</option>
+				<option value="information_media_internet">Information / media / internet</option>
+				<option value="public_administration">Public administration</option>
+				<option value="real_estate">Real estate</option>
+				<option value="transportation">Transportation</option>
+				<option value="retail">Retail</option>
+				<option value="manufacture">Manufacture</option>
+				<option value="auto_repair">Auto repair</option>
+				<option value="education">Education</option>
+				<option value="utilities">Utilities</option>
+				<option value="professions_scientific_technical">Professional, Scientific and Technical Services</option>
+				<option value="management">Management of Companies and Enterprises</option>
+				<option value="administrative_support">Administrative Support, Waste Management and Remediation Services</option>
+				<option value="other">other (please specify below)</option>
 			</select>
 		</li>
 		<li>
-			<label for="prof">Breve historia del negocio</label>
-			<input type="text" id="pride_in" name="pride_in" cols="50" rows="6" ></textarea>
+			<label for="industry_other">La Industria del negocio (otro)</label>
+			<input type='text' name='industry_other'>
 		</li>
 		<li>
-			<label for="town">Municipio del negocio</label>
+			<label for="pride_in">Breve historia del negocio *</label>
+			<textarea name="pride_in" cols="50" rows="6" ></textarea>
+		</li>
+		<li>
+			<label for="town">Municipio del negocio *</label>
 			<select id="town" name="town" required="true">
 				<option value="">Selecciona uno...</option>
 				{% for town in towns %}
@@ -39,21 +64,36 @@
 			</select>
 		</li>
 		<li>
-			<label for="town">Tus metas</label>
-			<select id="town" name="town" required="true">
-				<option value="">Selecciona uno...</option>
-				{% for town in towns %}
-				<option value="{{ town.name }}">{{ town.name }}</option>
-				{% endfor %}
-			</select>
+			<p>Tus metas</p>
 		</li>
 		<li>
-			<label for="town">Tu principal desafío </label>
-			<select id="town" name="town" required="true">
+			<label for="metas">Meta 1</label>
+			<input type='text' name='metas[]' required="true">
+		</li>
+		<li>
+			<label for="metas">Meta 2</label>
+			<input type='text' name='metas[]'>
+		</li>
+		<li>
+			<label for="metas">Meta 3</label>
+			<input type='text' name='metas[]'>
+		</li>
+		<li>
+			<label for="desafio">Tu principal desafío </label>
+			<select id="desafio" name="desafio" required="true">
 				<option value="">Selecciona uno...</option>
-				{% for town in towns %}
-				<option value="{{ town.name }}">{{ town.name }}</option>
-				{% endfor %}
+				<option value="relocate_business">relocate a business</option>
+				<option value="hire_interns">hire interns</option>
+				<option value="training_employees">training employees</option>
+				<option value="buy_equipment">buy equipment</option>
+				<option value="accessing_capital">accesing capital</option>
+				<option value="open_location">open a new location</option>
+				<option value="finding_customers">finding customers</option>
+				<option value="finding_people">finding qualified people</option>
+				<option value="taxes_regulations">taxes and regulations</option>
+				<option value="cost_of_rent">cost of rent</option>
+				<option value="brand_awareness">achieving brand awareness</option>
+				<option value="other">other</option>
 			</select>
 		</li>
 		<li>
