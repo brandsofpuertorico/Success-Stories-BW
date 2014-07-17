@@ -36,6 +36,7 @@ class Testimonial(Document):
     __collection__ = 'testimonials'
     structure = {
         'name': unicode,
+        'email': unicode,
         'prof': unicode,
         'industry': unicode,
         'industry_other': unicode,
@@ -49,7 +50,7 @@ class Testimonial(Document):
         'picture_url': unicode,
         'created_date': datetime
     }
-    required_fields = ['name', 'prof', 'industry', 'town', 'pride_in', 'metas', 'desafio', 'picture_url']
+    required_fields = ['name', 'email', 'prof', 'industry', 'town', 'pride_in', 'metas', 'desafio', 'picture_url']
     default_values = {'created_date': datetime.utcnow}
 
 
@@ -247,6 +248,7 @@ def add_entry():
     testimonials = db.Testimonial()
 
     testimonials['name'] = request.form.get('name', None)
+    testimonials['email'] = request.form.get('email', None)
     testimonials['prof'] = request.form.get('prof', None)
     testimonials['industry'] = request.form.get('industry', None)
     testimonials['industry_other'] = request.form.get('industry_other', None)
