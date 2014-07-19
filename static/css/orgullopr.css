@@ -369,7 +369,6 @@ button.submit:active {
    position: relative;
 }
 
-
 #map h1 {
     color: rgba(253,249,94,1);
     font-size: 3em;
@@ -435,4 +434,13 @@ button.submit:active {
 .flashes li {
     list-style: none;
 }
+
 /* videos.html end */
+
+
+.sobre-image {
+    margin: 0 auto;
+    
+
+}
+
