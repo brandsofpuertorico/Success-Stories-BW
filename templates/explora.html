@@ -17,11 +17,13 @@
       <div class="video-container row">
         {% for video in town_entries %}
           <div class="item col-lg-4">
+            <div class="item-content">
             {% if video.youtube_url %}
-              <iframe width="300" height="150" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+              <iframe width="350" height="260" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
             {% else %}
-              <img src="{{ video.picture_url }}" width="300" height"150" alt="{{ video.prof }}">
+              <img src="{{ video.picture_url }}" width="350" height"150" alt="{{ video.prof }}">
             {% endif %}
+            </div>
             <h4> <span class="video-name">{{ video.name }} </span></h4>
             <ul>
               <li><span class="video-name">{{ video.industry }} </span></li>

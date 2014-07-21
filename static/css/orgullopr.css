@@ -37,9 +37,10 @@ div.tooltip {
       position: absolute;
 }
 div.video {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: black;
+    position: center;
 
 }
 .header-title {
@@ -111,7 +112,6 @@ ul.nav-menu, ul.footer-links {
     background-color: rgba(151, 232, 193)
 }
 ul.nav-menu li {
-    float: right;
     margin: 0 5px;
     text-align: center;
     height: inherit;
@@ -416,6 +416,13 @@ button.submit:active {
     margin-right: 15px;
     width: 375px;
     color: #333;
+    height: 500px;
+
+}
+
+.item-content {
+
+    text-align: center;
 }
 .video-name {
     font-family: 'Open Sans', sans-serif;
