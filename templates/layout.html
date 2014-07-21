@@ -30,15 +30,16 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <div class="nav-sun"></div><div class="header-title"><a href="/">Home</a></div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="/subir" class="send-story"><span class="menu-text">SUBE TU HISTORIA</span></a></li>
-                    <li><a href="/explora"><span class="menu-text">EXPLORA LAS HISTORIAS</span></a></li>
-                    <li><a href="/sobre"><span class="menu-text">SOBRE</span></a></li>
-                </ul>
-
-            </nav>
+            <div class="nav-sun">
+                <div class="header-title"><a href="/">Home</a></div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="/subir" class="send-story"><span class="menu-text">SUBE TU HISTORIA</span></a></li>
+                        <li><a href="/explora"><span class="menu-text">EXPLORA LAS HISTORIAS</span></a></li>
+                        <li><a href="/sobre"><span class="menu-text">SOBRE</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 		<div id="content"> {% block content %}{% endblock %} </div>
 		<footer>
@@ -53,7 +54,6 @@
             <script src="{{ url_for('static', filename='js/vendor/masonry.pkgd.min.js') }}"></script>
             <script src="{{ url_for('static', filename='js/vendor/swfobject.js') }}"></script>
             <script src="{{ url_for('static', filename='js/vendor/jquery.ytchromeless.js') }}"></script>
-
             <script src="{{ url_for('static', filename='js/vendor/d3.js') }}"></script>
             <script src="{{ url_for('static', filename='js/vendor/klass.js') }}"></script>
             <script src="{{ url_for('static', filename='js/vendor/atlaspr.js') }}"></script>

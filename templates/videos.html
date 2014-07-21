@@ -6,15 +6,14 @@
 {% endblock %}
 {% block content %}
 
-    <div class="videos-content">
-        <div class="video-header">
+    <div class="container videos-content">
+        <h2 class="video-header">
             <span class="town-name">{{ town }}</span>
-        </div>
+        </h2>
         {% if videos %}
-            <div class="video-container">
-
+            <div class="row video-container">
                 {% for video in videos %}
-                    <div class="item">
+                    <div class="item col-lg-2">
                         {% if video.youtube_url %}
                         <iframe width="300" height="150" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
                         {% else %}

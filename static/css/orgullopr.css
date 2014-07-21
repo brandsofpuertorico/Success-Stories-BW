@@ -389,13 +389,11 @@ button.submit:active {
 
 /* videos.html start */
 .videos-content {
-    background-color: rgba(246,246,246,1);
-    height: 100%;
-    width: 100%;
+    font-family: Helvetica, Arial, Sans-Serif;
+
 }
 
 .video-header {
-    font-family: 'Copriola', sans-serif;
     font-weight: 600;
     color: rgba(246,246,246,1);
     height: 1.5em;
@@ -408,22 +406,18 @@ button.submit:active {
 }
 
 .video-container {
-    margin: 1.5em auto;
-    width: 90%;
-    text-align: center;
+    
 }
-
-.item {
-    /*width: 8em;
-    margin: 0 auto;
-    float: left;*/
-    margin-bottom: 5px;
-    padding: 10px;
+.video-container .item {
     border-radius: 3px;
     background: rgba(89, 190, 242, 1);
+    background: white;
+    padding: 10px;
+    margin-right: 15px;
+    width: 375px;
+    color: #333;
 }
 .video-name {
-    color: rgba(255, 255, 255, 1);
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 }
