@@ -5,11 +5,25 @@ body {
     color: white;
 }
 
+.navbar {
+    background-color: #5DC3F3;
+}
+.navbar a {
+    color: #fff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: yellow;
+    background-color: #5DC3F3;
+}
+
 .container {
 
-     width: 1170px;
-     display: block;
+     width: 100%;
+     
      height: 100%;
+     
 }
 
 form legend {
@@ -22,10 +36,10 @@ form legend {
 input {
     color: #333;
 }
-footer {
+/*footer {
     background-color: rgba(207,207,207,1);
-    margin: 0;
-}
+    width: 100%;
+}*/
 div.tooltip {
       color: #222;
       background: #fff;
@@ -70,11 +84,12 @@ div.video {
   font-family: "montserrat" sans-serif;
   font-weight: 700;
   font-size: x-large;
-  height: 1.5em;
+  min-height: 50px;
+
 }
 #map{
     margin: 0 auto;
-    width: 70%;
+    width: 33%;
     text-align: center;;
 }
 
@@ -157,13 +172,16 @@ ul.footer-links li:hover{
 /* layout.html end */
 
 /* index.html start*/
-.content-wrapper {
+#content {
+    margin-top: 50px;
+}
+/*.content-wrapper {
     width: 100%;
 }
 .map-wrapper {
     background-color: rgba(72,91,210,1);
     min-height: 550px;
-}
+}*/
 .text-wrapper {
     background-color: rgba(247,247,247,1);
     height: 100%;
@@ -272,7 +290,7 @@ ul.footer-links li:hover{
     width: 40%;
 }
 .input-form input, .input-form select {
-    height: 20px;
+
     padding: 5px 8px;
 }
 .input-form textarea {
@@ -360,6 +378,7 @@ button.submit:active {
     margin: 0 auto;
     width: 100%;
     padding-top: 1em;
+
 }
 
 .col-lg-4 {
@@ -377,12 +396,14 @@ button.submit:active {
     letter-spacing: 2pt;
     margin: 0;
     padding: 0;
+    height: 160px;
 }
 
 #map svg {
     /*TODO: Get the img centered witht he map*/
     /*background-image: url('/static/img/PR_Draft_PR_Map.png');*/
     background-size: auto;
+    /*margin-left: -300px;*/
 }
 
 /* index.html end */
@@ -399,10 +420,12 @@ button.submit:active {
     height: 1.5em;
     background-color: rgba(72,91,210,1);
     padding: 3px 0;
+    text-align:;
 }
 .town-name {
     margin: 1.5em 2.5em;
     font-size: 1.5em;
+    text-align: left;
 }
 
 .video-container {
@@ -440,8 +463,10 @@ button.submit:active {
 
 
 .sobre-image {
-    margin: 0 auto;
+    margin-top: auto;
     
 
 }
+
+
 

@@ -5,29 +5,30 @@
 	<!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
-    <div class="content-wrapper" xmlns="http://www.w3.org/1999/html">
-        <div class="map-wrapper">
-            <div id="map">
-                <h1>HISTORIAS&nbsp;<span><span>DE</span> <img src="{{ url_for('static', filename='img/Sun.png') }}"></span>&nbsp;NEGOCIOS</h1>
-            </div>
-			<div class="name-wrapper">
-				<span id="name"></span>
-			</div>
-     <!--
-        </div>
-        <div class="text-wrapper">
-            <div class="question">
-                <h1>&iquest;Qu&eacute es Historias de éxito?</h1>
-                <p>Historias de éxito es un proyecto para resaltar y promocionar las historias de éxito de pequeños empresarios en Puerto Rico que consiguieron financiamiento y crecieron gracias a ello.</p> -->
+    
+        
+    <div class="container">
+      <div id="map">
+          <h1>HISTORIAS&nbsp;<span><span>DE</span> <img id="sol" src="{{ url_for('static', filename='img/Sun.png') }}"></span>&nbsp;NEGOCIOS</h1>
+      </div>
+
+      <div class="name-wrapper">
+        <span id="name"></span>
             
-            <div class="form-wrapper">
-                            <a name="send-story"></div>
-            <div class="button-wrapper">
-                <a class="btn" href="/subir"><span>SUBE TU HISTORIA</span></a>
-            </div>
+      <div class="form-wrapper">
+          <a name="send-story"></div>
+      </div>
+
+      <div class="button-wrapper">
+          <a class="btn" href="/subir"><span>SUBE TU HISTORIA</span></a>
+      </div>
+
+            
     {% block scripts %}
         {{ super() }}
     {% endblock %}
+
+    </div> 
   	<script type = 'text/javascript'>
 
       $('document').ready(function() {
