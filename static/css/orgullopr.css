@@ -3,6 +3,7 @@ body {
     background-color: rgba(72,91,210,1);
     font-family: 'Montserrat', serif;
     color: white;
+    text-align: left;
 }
 
 .navbar {
@@ -381,13 +382,6 @@ button.submit:active {
 
 }
 
-.col-lg-4 {
-
-   width:33.33333333%;
-   float: left;
-   position: relative;
-}
-
 #map h1 {
     color: rgba(253,249,94,1);
     font-size: 3em;
@@ -440,6 +434,9 @@ button.submit:active {
     width: 375px;
     color: #333;
     height: 600px;
+    margin left: 15px;
+    margin-top: 10px;
+
 
 }
 
