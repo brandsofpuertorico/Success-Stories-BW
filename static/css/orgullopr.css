@@ -274,10 +274,12 @@ ul.footer-links li:hover{
     list-style-position: outside;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 .input-form li {
     padding: 12px;
     position: relative;
+
 }
 .input-form label {
     width: 40%;
@@ -423,6 +425,7 @@ button.submit:active {
 }
 
 .video-container {
+    width: 1600px;
     
 }
 .video-container .item {
@@ -431,7 +434,7 @@ button.submit:active {
     background: white;
     padding: 10px;
     margin-right: 15px;
-    width: 375px;
+    width: 350px;
     color: #333;
     height: 600px;
     margin left: 15px;
