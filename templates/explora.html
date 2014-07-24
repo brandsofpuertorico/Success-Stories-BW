@@ -5,6 +5,7 @@
   <!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
+  {% if entries %}
   {% for town, town_entries in entries.iteritems() %}
     <div class="videos-content container" id="{{ town }}">
       <div class="row">
@@ -43,6 +44,7 @@
       </div>
     </div>
   {% endfor %}
+  {% endif %}
     {% block scripts %}
         {{ super() }}
     {% endblock %}
