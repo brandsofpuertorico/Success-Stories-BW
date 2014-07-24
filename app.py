@@ -50,7 +50,7 @@ class Testimonial(Document):
         'picture_url': unicode,
         'created_date': datetime
     }
-    required_fields = ['name', 'email', 'prof', 'industry', 'town', 'pride_in', 'metas', 'desafio', 'picture_url']
+    required_fields = ['name', 'email', 'prof', 'industry', 'town', 'pride_in', 'desafio', 'picture_url']
     default_values = {'created_date': datetime.utcnow}
 
 
@@ -219,7 +219,7 @@ def explora():
     else:
         flash('No se encontraron videos.')
         return render_template('explora.html')
-    return render_template('explora.html')
+    return render_template('explora.html', entries=[])
 
 @app.route('/videos', methods=['GET'])
 def show_videos():

@@ -6,9 +6,9 @@
 {% endblock %}
 {% block content %}
   {% for town, town_entries in entries.iteritems() %}
-    <div class="videos-content container">
+    <div class="videos-content container" id="{{ town }}">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
           <h3 class="video-header">
             <span class="town-name">{{ town }}</span>
           </h3>
@@ -16,12 +16,12 @@
       </div>
       <div class="video-container row">
         {% for video in town_entries %}
-          <div class="item col-lg-4">
+          <div class="item col-lg-3">
             <div class="item-content">
             {% if video.youtube_url %}
               <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
             {% else %}
-              <img src="{{ video.picture_url }}" width="350" height"150" alt="{{ video.prof }}">
+              <img src="{{ video.picture_url }}" style="height:260px;width:325px"   alt="{{ video.prof }}">
             {% endif %}
             </div>
             <h4> <span class="video-name">{{ video.name }} </span></h4>

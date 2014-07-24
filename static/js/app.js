@@ -39,7 +39,7 @@ var mapOperator = {
     },
 
     seeTownVideos: function(feature, svg_path) {
-        window.open("/videos/" + feature.properties.NAME, "_self");
+        window.open("/explora#" + feature.properties.NAME, "_self");
     },
     getTownVideos: function(feature, svg_path) {
     	var videos = {};

@@ -886,6 +886,7 @@ pre code {
 }
 .col-xs-push-4 {
   left: 33.33333333%;
+  float: keft;
 }
 .col-xs-push-3 {
   left: 25%;
@@ -1284,6 +1285,7 @@ pre code {
   }
   .col-lg-4 {
     width: 33.33333333%;
+    margin-top: 20px;
 
   }
   .col-lg-3 {
