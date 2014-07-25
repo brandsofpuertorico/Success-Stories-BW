@@ -20,24 +20,30 @@
           <div class="item col-lg-3">
             <div class="item-content">
             {% if video.youtube_url %}
-              <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe> <script>console.log(video.youtube_link);</script>
+              <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_url }}" frameborder="0" allowfullscreen></iframe> <script>console.log(video.youtube_url);</script>
             {% else %}
               <img src="{{ video.picture_url }}" style="height:260px;width:325px"   alt="{{ video.prof }}">
             {% endif %}
             </div>
             <h4> <span class="video-name">{{ video.name }} </span></h4>
             <ul>
-              <li><span class="video-name">{{ video.industry }} </span></li>
-              <li><span class="video-name">{{ video.pride_in }} </span></li>
-              <li><span class="video-name">{{ video.desafio }} </span></li>
+              <li> <strong>Industry: </strong> <span class="video-name">{{ video.industry }} </span></li>
+              <li> <strong>Orgulloso de: </strong> <span class="video-name">{{ video.pride_in }} </span></li>
+              <li> <strong>Desafio: </strong> <span class="video-name">{{ video.desafio }} </span></li>
               {% for meta in video.metas %}
                 {% if meta != "" %}
                   <li><span class="video-name">Meta: {{ meta }} </span></li>
                 {% endif %}
               {% endfor %}
-              <li> <span class="video-name">{{ video.twitter_url }} </span></li>
-              <li> <span class="video-name">{{ video.facebook_url }} </span></li>
-              <li> <span class="video-name">{{ video.website_url }} </span></li>
+              {% if video.twitter_url %}
+                <li> <strong>Twitter: </strong> <span class="video-name">{{ video.twitter_url }} </span></li>  
+              {% endif %}
+              {% if video.facebook_url %}
+                <li> <strong>Facebook: </strong> <span class="video-name">{{ video.facebook_url }} </span></li>  
+              {% endif %}
+              {% if video.website_url %}
+                <li> <strong>Website: </strong> <span class="video-name">{{ video.website_url }} </span></li>  
+              {% endif %}
             </ul>
           </div>
         {% endfor %}
