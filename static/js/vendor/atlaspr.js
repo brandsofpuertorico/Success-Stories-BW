@@ -47,8 +47,9 @@ var AtlasPR = klass(function (options) {
 
     var color_scale = d3.scale.category20b();
     self.svg = d3.select(this.options.node).append("svg")
-      .attr("width", this.width)
-      .attr("height", this.height)
+      .attr("width", "70%")
+      .attr("height", "50%")
+      .attr("viewBox", "0 0 1000 300")
       .call(d3.behavior.zoom().on("zoom", this.options.zoom && redraw));
 
     self.projection = d3.geo.mercator()
