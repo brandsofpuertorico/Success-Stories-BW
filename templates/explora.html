@@ -20,7 +20,7 @@
           <div class="item col-lg-3">
             <div class="item-content">
             {% if video.youtube_url %}
-              <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+              <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe> <script>console.log(video.youtube_link);</script>
             {% else %}
               <img src="{{ video.picture_url }}" style="height:260px;width:325px"   alt="{{ video.prof }}">
             {% endif %}
