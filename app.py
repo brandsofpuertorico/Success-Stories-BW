@@ -44,6 +44,7 @@ class Testimonial(Document):
         'pride_in': unicode,
         'metas': list,
         'desafio': unicode,
+        'website_url': unicode,
         'twitter_url': unicode,
         'facebook_url': unicode,
         'youtube_url': unicode,
@@ -256,6 +257,7 @@ def add_entry():
     testimonials['pride_in'] = request.form.get('pride_in', None)
     testimonials['metas'] = request.form.getlist('metas[]', None)
     testimonials['desafio'] = request.form.get('desafio', None)
+    testimonials['website_url'] = request.form.get('website_url', None)
     testimonials['twitter_url'] = request.form.get('twitter_url', None)
     testimonials['facebook_url'] = request.form.get('facebook_url', None)
     testimonials['youtube_url'] = request.form.get('youtube_url', None).split('=')[-1]
