@@ -44,6 +44,9 @@
               {% if video.website_url %}
                 <li> <strong>Website: </strong> <span class="video-name">{{ video.website_url }} </span></li>  
               {% endif %}
+              {% if video.facebook_url %}
+                <div class="fb-like" data-href="{{ video.facebook_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+              {% endif %}
             </ul>
           </div>
         {% endfor %}
