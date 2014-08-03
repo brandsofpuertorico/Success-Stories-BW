@@ -7,14 +7,59 @@
 {% block content %}
   {% if entries %}
   {% for town, town_entries in entries.iteritems() %}
-    <div class="videos-content container" id="{{ town }}">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="video-header">
-            <span class="town-name">{{ town }}</span>
-          </h3>
-        </div>
-      </div>
+
+  <!--    <select id="ddlList">
+        <option value="">Industria</option>
+        <option value="Agricultura">Agricultura</option>
+        <option value="Turismo">Turismo</option>
+        <option value="Finanzas">Finanzas</option>
+        <option value="Hospedaje">Hospedaje</option>
+        <option value="Comida & Bebida">Comida & Bebida</option>
+        <option value="Arte y entretenimiento">Arte y entretenimiento</option>
+        <option value="Construcción">Construcción</option>
+        <option value="Farmaceútica">Farmaceútica</option>
+        <option value="Biotecnología">Biotecnología</option>
+        <option value="Comercio">Comercio</option>
+        <option value="Salud">Salud</option>
+        <option value="nformática / media / internet">Informática / media / internet</option>
+        <option value="Administración pública">Administración pública</option>
+        <option value="Bienes raíces">Bienes raíces</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Retail">Retail</option>
+        <option value="Manufactura">Manufactura</option>
+        <option value="Reparación de autos">Reparación de autos</option>
+        <option value="Educación">Educación</option>
+        <option value="Servicios profesionales">Servicios profesionales</option>
+        <option value="Servicios científicos y técnicos">Servicios científicos y técnicos</option>
+        <option value="Administración de empresas">Administración de empresas</option>
+        <option value="Soporte administrativo">Soporte administrativo</option>
+        <option value="Otra">Otra</option>
+      </select>
+      <select id="ddlList">
+        <option value="">Desafío</option>
+        <option value="Reubicar un negocio">Reubicar un negocio</option>
+        <option value="Contratar pasantes">Contratar pasantes</option>
+        <option value="Entrenar empleados">Entrenar empleados</option>
+        <option value="Comprar equipamiento">Comprar equipamiento</option>
+        <option value="Acceder a capital">Acceder a capital</option>
+        <option value="Abrir un nuevo local">Abrir un nuevo local</option>
+        <option value="Encontrar clientes">Encontrar clientes</option>
+        <option value="Encontrar empleados calificados">Encontrar empleados calificados</option>
+        <option value="Impuestos y regulaciones">Impuestos y regulaciones</option>
+        <option value="Costo del alquiler">Costo del alquiler</option>
+        <option value="Exportar la marca">Exportar la marca</option>
+        <option value="other">Otro</option>
+      </select>-->
+
+
+      <div class="videos-content container" id="{{ town }}">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="video-header">
+              <span class="town-name">{{ town }}</span>
+            </h3>
+          </div>
+        </div> 
       <div class="video-container row">
         {% for video in town_entries %}
           <div class="item col-lg-3">

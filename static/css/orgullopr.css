@@ -17,6 +17,7 @@ body {
     text-decoration: none;
     color: yellow;
     background-color: #5DC3F3;
+    
 }
 
 .container {
@@ -113,8 +114,8 @@ div.video {
 }
 .nav-sun {
     float: left;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     /*background: url("http://cl.ly/WXYi/logo.jpg");*/
     background-size: cover;
     margin: 5px 15px;

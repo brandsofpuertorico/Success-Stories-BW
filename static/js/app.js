@@ -72,3 +72,21 @@ var mapOperator = {
         });
     }
 }
+
+    $(document).ready(function() {
+    $('#btnSort').click(function(e) {
+        $("#ddlList").html($('#ddlList option').sort(function(x, y) {
+            return $(x).text() < $(y).text() ? -1 : 1;
+        }))
+        $("#ddlList").get(0).selectedIndex = 0;
+        e.preventDefault();
+    });
+
+    $('#btnSortVal').click(function(e) {
+        $("#ddlList").html($('#ddlList option').sort(function(x, y) {
+            return $(x).val() < $(y).val() ? -1 : 1;
+        }))
+        $("#ddlList").get(0).selectedIndex = 0;
+        e.preventDefault();
+    });
+});
