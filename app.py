@@ -260,7 +260,7 @@ def add_entry():
     testimonials['website_url'] = request.form.get('website_url', None)
     testimonials['twitter_url'] = request.form.get('twitter_url', None)
     testimonials['facebook_url'] = request.form.get('facebook_url', None)
-    testimonials['youtube_url'] = request.form.get('youtube_url', None).split('=')[-1]
+    testimonials['youtube_url'] = video_id(request.form.get('youtube_url', None))
     testimonials['picture_url'] = request.form.get('picture_url', None)
     testimonials['created_date'] = request.form.get('created_date', None)
 
