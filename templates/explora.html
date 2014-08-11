@@ -81,13 +81,13 @@
                 {% endif %}
               {% endfor %}
               {% if video.twitter_url %}
-                <li> <strong>Twitter: </strong> <span class="video-name">{{ video.twitter_url }} </span></li>  
+                <li> <strong>Twitter: </strong> <span class="video-name"><a href="{{ video.twitter_url }}" target="_blank">{{ video.twitter_url }}</a> </span></li>  
               {% endif %}
               {% if video.website_url %}
-                <li> <strong>Website: </strong> <span class="video-name">{{ video.website_url }} </span></li>  
+                <li> <strong>Website: </strong> <span class="video-name"><a href="{{ video.website_url }}" target="_blank">{{ video.website_url }}</a> </span></li>  
               {% endif %}
               {% if video.facebook_url %}
-                <li> <strong>Facebook: </strong> {{ video.facebook_url }}</li>  
+                <li> <strong>Facebook: </strong> <a href="{{ video.facebook_url }}" target="_blank">{{ video.facebook_url }}</a></li>  
               {% endif %}
               {% if video.facebook_url %}
                 <div class="fb-like" data-href="{{ video.facebook_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
