@@ -4,9 +4,9 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
-    Ainsley Wagoner -- UX designer -- https://twitter.com/ainsleywagon
+    Ainsley Wagoner -- Designer -- https://twitter.com/ainsleywagon
     Maksim Pecherskiy -- Developer -- http://twitter.com/MrMaksimize
-    Clara Gonzalez-Sueyro -- http://twitter.com/claragsueyro
+    Clara Gonzalez-Sueyro -- UX Researcher -- ttp://twitter.com/claragsueyro
     Froilán Irizarry -- Developer -- https://twitter.com/skfroi
 
 # THANKS

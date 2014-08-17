@@ -400,6 +400,7 @@ button.submit:active {
     /*TODO: Get the img centered witht he map*/
     /*background-image: url('/static/img/PR_Draft_PR_Map.png');*/
     background-size: auto;
+    width: 100%;
     /*margin-left: -300px;*/
 }
 
