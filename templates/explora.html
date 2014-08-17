@@ -74,7 +74,6 @@
             <ul>
               <li> <strong>Email: </strong> <span class="video-name">{{ video.email }} </span></li>
               <li> <strong>Industria: </strong> <span class="video-name">{{ video.industry }} </span></li>
-              <li> <strong>Historia del primer peso: </strong> <span class="video-name">{{ video.pride_in }} </span></li>
               <li> <strong>Principal Desafio: </strong> <span class="video-name">{{ video.desafio }} </span></li>
               {% for meta in video.metas %}
                 {% if meta != "" %}
@@ -82,6 +81,7 @@
                 {% endif %}
               {% endfor %}
               {% if video.twitter_url %}
+               <li> <strong>Tu desafío en detalle: </strong> <span class="video-name">{{ video.pride_in }} </span></li>
                 <li> <strong>Twitter: </strong> <span class="video-name"><a href="{{ video.twitter_url }}" target="_blank">{{ video.twitter_url }}</a> </span></li>  
               {% endif %}
               {% if video.website_url %}
