@@ -1,20 +1,67 @@
 {% extends "layout.html" %}
-{% block title %}Sobre - Historias de Negocios - Puerto Rico{% endblock %}
+{% block title %}Contactenos - Historias de Negocios - Puerto Rico{% endblock %}
 {% block head %}
 	{{ super() }}
 	<!-- any local css/styling should be put here -->
 {% endblock %}
 {% block content %}
-    
-  <div class="col-lg-4">
-        <h2>Este es un proyecto de Brands of Puerto Rico y Code for America. Envianos un email para contactarte con nosotros.</h2>
-    <div class="form-group">
-    <label for="email" class="col-sm-4 control-label">Dirección de email</label>
-     <div class="col-sm-8">
-      <input type="email" class="form-control" name="email" placeholder="Entre su email" required="true"/>
-      </div>
-     </div>
-   </div>
+  <div class="well container">
+    <form action="/send-email" method="POST" class="form-horizontal" role="form">
+      <fieldset>
 
+        <!-- Form Name -->
+        <legend class="contact-legend">Contactenos</legend>
 
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="name">Nombre</label>
+          <div class="controls">
+            <input id="name" name="name" type="text" placeholder="Entre su nombre" class="form-control" required="">
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="email">Correl Electronico</label>
+          <div class="controls">
+            <input id="email" name="email" type="text" placeholder="Entre su correo electronico" class="form-control" required="">
+          </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="control-group">
+          <label class="control-label" for="tema">Razon de contacto</label>
+          <div class="controls">
+            <select id="subject" name="subject" class="form-control">
+              <option value="General Topic">General</option>
+              <option value="Pedido de Informacion">Información</option>
+              <option value="Sugerencia">Sugerencia</option>
+              <option value="Error">Error / Problema</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="control-group">
+          <label class="control-label" for="msg">Mensage</label>
+          <div class="controls">                     
+            <textarea id="msg" class="form-control" name="msg"></textarea>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="control-group">
+          <label class="control-label" for="submit-email"></label>
+          <div class="controls">
+            <button id="submit-email" type="submit" name="submit-email" class="submit">Enviar</button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
 {% endblock %}

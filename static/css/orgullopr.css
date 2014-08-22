@@ -1,3 +1,22 @@
+/* General */
+.well {
+    color: rgba(0, 0, 0, 1);
+    max-width: 60%
+}
+
+.contact-legend {
+    color: rgba(0, 0, 0, 1);
+}
+
+.error {
+    color: rgba(255,255,255,1);
+    background: rgba(255,0,0,1);
+}
+
+.success {
+    color: rgba(255,255,255,1);
+    background: rgba(53,94,59,1);   
+}
 /* layout.html start */
 body {
     background-color: rgba(72,91,210,1);
@@ -515,3 +534,5 @@ button.submit:active {
 a {
     color: rgba(54,61,203,1);
 }
+
+

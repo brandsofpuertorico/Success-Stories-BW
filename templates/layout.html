@@ -70,7 +70,20 @@
                 </nav>
             </div> -->
         
-		<div class="container" id="content"> {% block content %}{% endblock %} </div> 
+		<div class="container" id="content"> 
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for category, message in messages %}
+                            <li class="{{ category }}"> {{message}} <li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %} 
+
+        </div> 
 		<!-- <footer>
             <ul class="footer-links">
                 <li><a href="#">Contacto</a></li>
@@ -93,6 +106,33 @@
         {% endblock %}
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
+            // wire up the buttons to dismiss the modal when shown
+            $(function() {
+                $("#myModal").bind("show", function() {
+                    $("#myModal a.btn").click(function(e) {
+                        // do something based on which button was clicked
+                        // we just log the contents of the link element for demo purposes
+                        console.log("button pressed: "+$(this).html());
+                        // hide the dialog box
+                        $("#myModal").modal('hide');
+                    });
+                });
+             
+                // remove the event listeners when the dialog is hidden
+                $("#myModal").bind("hide", function() {
+                    // remove event listeners on the buttons
+                    $("#myModal a.btn").unbind();
+                });
+             
+                //finally, wire up the actual modal functionality and show the dialog
+                $("#myModal").modal({
+                  "backdrop"  : "static",
+                  "keyboard"  : true,
+                  "show"      : true    // this parameter ensures the modal is shown immediately
+                });
+            });
+            
+
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];

@@ -2,11 +2,13 @@ from flask import Flask, request, g, redirect, url_for, render_template, flash
 from datetime import datetime
 from mongokit import Connection, Document
 from urlparse import urlparse, parse_qs
+import mandrill
+
 import os
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-app.secret_key =    "a"
+app.secret_key = "a"
 
 
 def parse_mongodb_url():
@@ -189,14 +191,17 @@ def index():
     load_towns()
     return render_template('index.html', towns=g.towns)
 
+
 @app.route('/subir')
 def subir():
     load_towns()
     return render_template('subir.html', towns=g.towns)
 
+
 @app.route('/sobre')
 def sobre():
     return render_template('sobre.html')
+
 
 @app.route('/explora')
 def explora():
@@ -221,6 +226,7 @@ def explora():
         flash('No se encontraron videos.')
         return render_template('explora.html')
     return render_template('explora.html', entries=[])
+
 
 @app.route('/videos', methods=['GET'])
 def show_videos():
@@ -267,6 +273,64 @@ def add_entry():
     testimonials.save()
 
     flash('New entry was successfully posted')
+    return redirect(url_for('index'))
+
+
+@app.route('/contacto', methods=['GET'])
+def contact():
+    return render_template('contacto.html')
+
+
+@app.route('/send-email', methods=['POST'])
+def send_email():
+    from_addr = request.form.get('email', None)
+    name = request.form.get('name', None)
+    subject = request.form.get('subject', None)
+    email_msg = request.form.get('msg', None)
+
+    try:
+        mandrill_client = mandrill.Mandrill(os.environ.get('MANDRILL_KEY', None))
+
+        message = {
+            'auto_html': None,
+            'auto_text': None,
+            'from_email': from_addr,
+            'from_name': name,
+            'global_merge_vars': [{'content': 'merge1 content', 'name': 'merge1'}],
+            'headers': {'Reply-To': 'irizarry.froilan@gmail.com'},
+            'html': '<p>{}</p>'.format(email_msg),
+            'important': False,
+            'inline_css': None,
+            'merge': True,
+            'merge_vars': [{'rcpt': 'recipient.email@example.com',
+                            'vars': [{'content': 'merge2 content', 'name': 'merge2'}]}],
+            'metadata': {'website': 'www.example.com'},
+            'preserve_recipients': None,
+            'recipient_metadata': [{'rcpt': 'recipient.email@example.com',
+                                    'values': {'user_id': 123456}}],
+            'return_path_domain': None,
+            'signing_domain': None,
+            'subject': subject,
+            'tags': ['contact-form'],
+            'text': email_msg,
+            'to': [{'email': 'irizarry.froilan@gmail.com',
+                    'name': 'Froilan Irizarry',
+                    'type': 'to'}],
+            'track_clicks': None,
+            'track_opens': None,
+            'tracking_domain': None,
+            'url_strip_qs': None,
+            'view_content_link': None
+        }
+
+        result = mandrill_client.messages.send(
+            message=message, async=False, ip_pool='Main Pool')
+
+        flash(u'Correo electronico fue {0}'.format(result[0]['status']), 'success')
+
+    except mandrill.Error:
+        flash(u'Hubo un error al enviar el correo electronico. Intente mas tarde.', 'error')
+
     return redirect(url_for('index'))
 
 
