@@ -9,6 +9,7 @@ body {
 .navbar {
     background-color: #5DC3F3;
 }
+
 .navbar a {
     color: #fff;
 }
@@ -32,12 +33,15 @@ form legend {
     color: white;
     border: none;
 }
+
 .input-form {
     border-top: none;
 }
+
 input {
     color: #333;
 }
+
 /*footer {
     background-color: rgba(207,207,207,1);
     width: 100%;
@@ -52,6 +56,7 @@ div.tooltip {
       visibility: hidden;
       position: absolute;
 }
+
 div.video {
     width: 200px;
     height: 200px;
@@ -59,11 +64,13 @@ div.video {
     position: center;
 
 }
+
 .header-title {
     display: table;
     float: left;
     height: 4em;
 }
+
 .header-title a{
     text-decoration: none;
     color: white;
@@ -74,10 +81,12 @@ div.video {
     font-size: large;
 
 }
+
 .wrapper {
     margin: 0;
     padding: 0;
 }
+
 .name-wrapper {
   margin: 0 auto;
   text-align: center;
@@ -89,6 +98,7 @@ div.video {
   min-height: 50px;
 
 }
+
 #map{
     margin: 0 auto;
     width: 33%;
@@ -98,6 +108,7 @@ div.video {
 #map h1 span {
     position: relative;
 }
+
 #map h1 span span {
     position: absolute;
     color: rgba(72,91,210,1);
@@ -107,11 +118,11 @@ div.video {
     font-size: 70%;
     letter-spacing: 0.5pt;
 }
+
 #map h1 {
     position: relative;
-    
-
 }
+
 .nav-sun {
     float: left;
     height: 60px;
@@ -120,6 +131,7 @@ div.video {
     background-size: cover;
     margin: 5px 15px;
 }
+
 ul.nav-menu, ul.footer-links {
     font-family: "montserrat", sans-serif;
     font-weight: 700;
@@ -128,6 +140,7 @@ ul.nav-menu, ul.footer-links {
     margin: 0;
     background-color: rgba(151, 232, 193)
 }
+
 ul.nav-menu li {
     margin: 0 5px;
     text-align: center;
@@ -135,9 +148,11 @@ ul.nav-menu li {
     display: inline-table;
     padding: 0 5px;
 }
+
 ul.nav-menu li:hover {
     background-color: rgba(179, 212, 252);
 }
+
 ul.nav-menu li a {
     text-align: center;
     vertical-align: middle;
@@ -148,14 +163,15 @@ ul.nav-menu li a {
 ul.footer-links {
     text-align: center;
 }
+
 ul.footer-links li{
     display: inline-table;
     margin: 0 5px;
     text-align: center;
     height: 100%;
     padding: 0 5px;
-
 }
+
 ul.footer-links li a {
     text-align: center;
     vertical-align: middle;
@@ -168,15 +184,18 @@ ul.footer-links li:hover{
     background-color: rgba(246,246,246,1);
     color: rgba(203,203,203,1);
 }
+
 .menu-text {
     color: #ffffff;
 }
+
 /* layout.html end */
 
 /* index.html start*/
 #content {
     margin-top: 50px;
 }
+
 /*.content-wrapper {
     width: 100%;
 }
@@ -189,21 +208,25 @@ ul.footer-links li:hover{
     height: 100%;
     width: 100%;
 }
+
 .question, .about {
     vertical-align: middle;
     float: center;
     /*height: 100%;*/
     width: 50%;
 }
+
 .question {
     margin: 0 auto;
     text-align: center;
 }
+
 .question p {
     margin: 0 auto 1em;
     text-align: left;
     padding: 0 5em;
 }
+
 .about li {
     padding-right: 2em;
 }
@@ -213,6 +236,7 @@ ul.footer-links li:hover{
     text-align: center;
     width: 100%;
 }
+
 .btn {
     float: none;
     clear: both;
@@ -221,9 +245,11 @@ ul.footer-links li:hover{
     font-weight: 600;
     white-space: nowrap;
 }
+
 .btn:hover {
     cursor: pointer;
 }
+
 .btn > span {
     margin: 0 auto 1em;
     padding: 0.5em 1em;
@@ -234,10 +260,12 @@ ul.footer-links li:hover{
     color: rgba(255, 255, 255, 1);
     background: rgba(10, 199, 244, 1);
 }
+
 .btn:hover > span,
 .btn:focus > span {
     background: #97e8c1;
 }
+
 .btn:active > span {
     background: rgba(52, 207, 44, 1);
     transition: none;
@@ -247,6 +275,7 @@ ul.footer-links li:hover{
 :-moz-placeholder {
     color: rgba(93,195,243,1);
 }
+
 ::-webkit-input-placeholder {
     color: rgba(93,195,243,1);
 }
@@ -254,22 +283,26 @@ ul.footer-links li:hover{
 *:focus {
     outline: none;
 }
+
 .form-wrapper {
     display: none;
     clear: both;
 }
+
 .input-form {
     margin: 0 auto;
     padding-top: 1.5em;
     width: 60%;
     text-align: center;
 }
+
 .input-form legend {
     font-family: 'montserrat', sans-serif;
     font-weight: 800;
     font-size: x-large;
     position: center;
 }
+
 .input-form ul {
     list-style-type: none;
     list-style-position: outside;
@@ -277,11 +310,12 @@ ul.footer-links li:hover{
     padding: 0;
     width: 100%;
 }
+
 .input-form li {
     padding: 12px;
     position: relative;
-
 }
+
 .input-form label {
     width: 40%;
     margin-top: 3px;
@@ -290,16 +324,20 @@ ul.footer-links li:hover{
     padding: 3px;
     text-align: right;
 }
+
 .input-form input, .input-form select, .input-form textarea {
     width: 40%;
 }
+
 .input-form input, .input-form select {
 
     padding: 5px 8px;
 }
+
 .input-form textarea {
     padding: 8px;
 }
+
 .input-form input, .input-form textarea, .input-form select {
     border: 1px solid rgba(170, 170, 170, 1);
     box-shadow: 0px 0px 3px rgba(204, 204, 204, 1), 0 10px 15px white inset;
@@ -307,11 +345,13 @@ ul.footer-links li:hover{
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
+
 .input-form input:focus, .input-form textarea:focus, .input-form select:focus {
     background: rgba(255,255,255,1);
     border: 1px solid rgba(84,84,84,1);
     box-shadow: 0 0 3px rgba(170,170,170,1);
 }
+
 button.submit {
     background-color: #68b12f;
     background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
@@ -351,8 +391,8 @@ button.cancel {
     -o-box-shadow: 0 1px 0 0 #D56E57 inset;
     color: white;
 }
-button.submit, button.cancel  {
 
+button.submit, button.cancel  {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -363,10 +403,12 @@ button.submit, button.cancel  {
     text-align: center;
 
 }
+
 button.submit:hover, button.cancel:hover {
     opacity:.85;
     cursor: pointer;
 }
+
 button.submit:active {
     border: 1px solid #20911e;
     box-shadow: 0 0 10px 5px #356b0b inset;
@@ -374,7 +416,6 @@ button.submit:active {
     -moz-box-shadow: 0 0 10px 5px #356b0b inset;
     -ms-box-shadow: 0 0 10px 5px #356b0b inset;
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
-
 }
 /* input form styles end */
 
@@ -382,7 +423,6 @@ button.submit:active {
     margin: 0 auto;
     width: 100%;
     padding-top: 1em;
-
 }
 
 #map h1 {
@@ -409,7 +449,6 @@ button.submit:active {
 /* videos.html start */
 .videos-content {
     font-family: Helvetica, Arial, Sans-Serif;
-
 }
 
 .video-header {
@@ -420,6 +459,7 @@ button.submit:active {
     padding: 3px 0;
     text-align:;
 }
+
 .town-name {
     margin: 1.5em 2.5em;
     font-size: 1.5em;
@@ -430,6 +470,7 @@ button.submit:active {
     width: 1300px;
     
 }
+
 .video-container .item {
     border-radius: 3px;
     background: rgba(89, 190, 242, 1);
@@ -441,14 +482,12 @@ button.submit:active {
     height: 750px;
     margin left: 15px;
     margin-top: 10px;
-
-
 }
 
 .item-content {
-
     text-align: center;
 }
+
 .video-name {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -461,15 +500,18 @@ button.submit:active {
     list-style: none;
 }
 
+
 /* videos.html end */
-
-
 .sobre-image {
     margin-top: auto;
-    
-    
-
 }
 
 
+/* Explora styles */
+.explora-list {
+    list-style: none;
+}
 
+a {
+    color: rgba(54,61,203,1);
+}
