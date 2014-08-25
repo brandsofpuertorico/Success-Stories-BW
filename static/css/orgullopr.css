@@ -20,7 +20,7 @@
 /* layout.html start */
 body {
     background-color: rgba(72,91,210,1);
-    font-family: 'Montserrat', serif;
+    font-family: 'helvetica-neue';
     color: white;
     text-align: left;
 }
@@ -152,7 +152,7 @@ div.video {
 }
 
 ul.nav-menu, ul.footer-links {
-    font-family: "montserrat", sans-serif;
+    font-family: "helvetica-neue";
     font-weight: 700;
     height: 4em;
     padding: 0;
@@ -259,7 +259,7 @@ ul.footer-links li:hover{
 .btn {
     float: none;
     clear: both;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'helvetica-neue';
     font-size: x-large;
     font-weight: 600;
     white-space: nowrap;
@@ -316,7 +316,7 @@ ul.footer-links li:hover{
 }
 
 .input-form legend {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'helvetica-neue';
     font-weight: 800;
     font-size: x-large;
     position: center;
@@ -447,7 +447,7 @@ button.submit:active {
 #map h1 {
     color: rgba(253,249,94,1);
     font-size: 3em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'helvetica-neue';
     font-weight: 800;
     letter-spacing: 2pt;
     margin: 0;
@@ -508,7 +508,7 @@ button.submit:active {
 }
 
 .video-name {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'helvetica-neue';
     font-weight: 700;
 }
 .flashes {
