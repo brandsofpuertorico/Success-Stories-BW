@@ -522,7 +522,9 @@ button.submit:active {
 
 /* videos.html end */
 .sobre-image {
-    margin-top: auto;
+    margin-top: 2px;
+    padding-top: 1px;
+    width: 100%;
 }
 
 
