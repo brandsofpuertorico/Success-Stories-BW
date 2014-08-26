@@ -95,7 +95,7 @@ div.video {
     color: white;
     display: table-cell;
     vertical-align: middle;
-    font-family: "montserrat" sans-serif;
+    font-family: "helvetica" ;
     font-weight: 700;
     font-size: large;
 
@@ -111,7 +111,7 @@ div.video {
   text-align: center;
   color: rgba(253,253,87,1);
   padding: 0 0 15px 0;
-  font-family: "montserrat" sans-serif;
+  font-family: "helvetica";
   font-weight: 700;
   font-size: x-large;
   min-height: 50px;
