@@ -450,9 +450,9 @@ button.submit:active {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     letter-spacing: 2pt;
-    margin: 0;
+    margin: 20px;
     padding: 0;
-    height: 160px;
+    height: 110px;
 }
 
 #map svg {
@@ -460,6 +460,7 @@ button.submit:active {
     /*background-image: url('/static/img/PR_Draft_PR_Map.png');*/
     background-size: auto;
     width: 100%;
+    margin-top: 5px;
     /*margin-left: -300px;*/
 }
 
