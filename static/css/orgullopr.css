@@ -20,7 +20,7 @@
 /* layout.html start */
 body {
     background-color: rgba(72,91,210,1);
-    font-family: 'monserrat, sans serif-monserrat, sans serif';
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: left;
 }
@@ -95,7 +95,7 @@ div.video {
     color: white;
     display: table-cell;
     vertical-align: middle;
-    font-family: "monserrat, sans serif" ;
+    font-family: 'Montserrat', sans-serif ;
     font-weight: 700;
     font-size: large;
 
@@ -111,7 +111,7 @@ div.video {
   text-align: center;
   color: rgba(253,253,87,1);
   padding: 0 0 15px 0;
-  font-family: "monserrat, sans serif";
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: x-large;
   min-height: 50px;
@@ -152,7 +152,7 @@ div.video {
 }
 
 ul.nav-menu, ul.footer-links {
-    font-family: "monserrat, sans serif-monserrat, sans serif";
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     height: 4em;
     padding: 0;
@@ -259,7 +259,7 @@ ul.footer-links li:hover{
 .btn {
     float: none;
     clear: both;
-    font-family: 'monserrat, sans serif-monserrat, sans serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: x-large;
     font-weight: 600;
     white-space: nowrap;
@@ -316,7 +316,7 @@ ul.footer-links li:hover{
 }
 
 .input-form legend {
-    font-family: 'monserrat, sans serif-monserrat, sans serif';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: x-large;
     position: center;
@@ -447,7 +447,7 @@ button.submit:active {
 #map h1 {
     color: rgba(253,249,94,1);
     font-size: 3em;
-    font-family: 'monserrat, sans serif-monserrat, sans serif';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     letter-spacing: 2pt;
     margin: 0;
@@ -467,7 +467,7 @@ button.submit:active {
 
 /* videos.html start */
 .videos-content {
-    font-family: monserrat, sans serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .video-header {
@@ -483,7 +483,7 @@ button.submit:active {
     margin: 1.5em 2.5em;
     font-size: 1.5em;
     text-align: left;
-    font-style: monserrat, sans serif;
+    font-style: 'Montserrat', sans-serif;
 }
 
 .video-container {
@@ -509,7 +509,7 @@ button.submit:active {
 }
 
 .video-name {
-    font-family: 'monserrat, sans serif-monserrat, sans serif';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 .flashes {
