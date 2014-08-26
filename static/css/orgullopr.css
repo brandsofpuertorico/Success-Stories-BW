@@ -467,7 +467,7 @@ button.submit:active {
 
 /* videos.html start */
 .videos-content {
-    font-family: Helvetica, Arial, Sans-Serif;
+    font-family: Helvetica;
 }
 
 .video-header {
@@ -483,6 +483,7 @@ button.submit:active {
     margin: 1.5em 2.5em;
     font-size: 1.5em;
     text-align: left;
+    font-style: helvetica;
 }
 
 .video-container {
