@@ -451,8 +451,8 @@ button.submit:active {
     font-weight: 800;
     letter-spacing: 2pt;
     margin: 20px;
-    padding: 0;
-    height: 110px;
+    padding: 10px;
+
 }
 
 #map svg {
