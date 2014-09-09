@@ -50,6 +50,7 @@ class Testimonial(Document):
         'twitter_url': unicode,
         'facebook_url': unicode,
         'youtube_url': unicode,
+        'vimeo_url': unicode,
         'picture_url': unicode,
         'created_date': datetime
     }
@@ -175,6 +176,25 @@ def video_id(value):
     # fail?
     return None
 
+def vimeo_video_id(value):
+    """ 
+    Examples:
+    - https://vimeo.com/11111111
+    - http://vimeo.com/11111111
+    - https://www.vimeo.com/11111111
+    - http://www.vimeo.com/11111111
+    - https://vimeo.com/channels/11111111
+    - http://vimeo.com/channels/11111111
+    - https://vimeo.com/groups/name/videos/11111111
+    """
+
+    import urlparse
+
+    parsed_url = urlparse.urlparse(value)
+    parsed_url_path_parts = parsed_url.path.lstrip('/').split('/')
+
+    return parsed_url_path_parts[-1]
+
 
 @app.teardown_appcontext
 def close_db(error):
@@ -266,7 +286,15 @@ def add_entry():
     testimonials['website_url'] = request.form.get('website_url', None)
     testimonials['twitter_url'] = request.form.get('twitter_url', None)
     testimonials['facebook_url'] = request.form.get('facebook_url', None)
-    testimonials['youtube_url'] = video_id(request.form.get('youtube_url', None))
+
+    video_url = request.form.get('youtube_url', None)
+    if 'youtube' in video_url or 'youtu.be' in video_url:
+        testimonials['youtube_url'] = video_id(request.form.get('youtube_url', None))
+        testimonials['vimeo_url'] = None
+    else:
+        testimonials['youtube_url'] = None
+        testimonials['vimeo_url'] = vimeo_video_id(request.form.get('youtube_url', None))
+
     testimonials['picture_url'] = request.form.get('picture_url', None)
     testimonials['created_date'] = request.form.get('created_date', None)
 

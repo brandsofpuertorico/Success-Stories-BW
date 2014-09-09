@@ -66,6 +66,8 @@
             <div class="item-content">
             {% if video.youtube_url %}
               <iframe width="325" height="260" src="//www.youtube.com/embed/{{ video.youtube_url }}" frameborder="0" allowfullscreen></iframe>
+              {% elif video.vimeo_url %}
+              <iframe src="//player.vimeo.com/video/{{ video.vimeo_url}}" width="325" height="260" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             {% else %}
               <img src="{{ video.picture_url }}" style="height:260px;width:325px"   alt="{{ video.prof }}">
             {% endif %}
