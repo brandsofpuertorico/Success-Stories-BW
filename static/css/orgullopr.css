@@ -445,8 +445,8 @@ button.submit:active {
 }
 
 #map h1 {
-    color: rgba(253,249,94,1);
-    font-size: 3em;
+    color: white;
+    font-size: 4em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     letter-spacing: 2pt;
@@ -525,12 +525,13 @@ button.submit:active {
 
 /* videos.html end */
 .sobre-image {
-    margin-top: 5px;
+
     padding-top: 1px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 50%;
+    margin: 20px auto;
     display: block;
+
+{
 
 
 /* Explora styles */
