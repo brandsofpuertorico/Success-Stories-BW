@@ -474,9 +474,9 @@ button.submit:active {
 
 .video-header {
     font-weight: 600;
-    color: rgba(246,246,246,1);
+    color: white;
     height: 1.5em;
-    background-color: rgba(72,91,210,1);
+    background-color: #31689B;
     padding: 3px 0;
     text-align:;
 }
