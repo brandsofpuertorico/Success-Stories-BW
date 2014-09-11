@@ -451,7 +451,7 @@ button.submit:active {
     font-weight: 800;
     letter-spacing: 2pt;
     margin: 20px;
-    padding: 50px;
+    padding: 8px;
 
 
 }
@@ -527,7 +527,7 @@ button.submit:active {
 .sobre-image {
 
     padding-top: 1px;
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     display: block;
 
